@@ -1,0 +1,405 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&display=swap');
+
+/*--------TEMA 1 -------*/
+$t1_clr1: #8E94F2;
+$t1_clr2:#8895B3;
+$t1_clr3: #9FA0FF;
+$t1_clr4: #BBADFF;
+$t1_clr5: #DAB6FC;
+
+/*--------TEMA 2 -------*/
+$t2_clr1: #F7F7F2;
+$t2_clr2:#E4E6C3;
+$t2_clr3: #899878;
+$t2_clr4: #222725;
+$t2_clr5: #121113;
+
+$ff-ubuntu: 'Poppins', sans-serif;
+
+$border-radius: 10px;
+
+$fw-400: 400;
+$fw-500: 500;
+$fw-300: 300;
+$fw-700: 700;
+
+$box-shadow: 2px 3px 11px 1px;
+
+
+.fa, .fas, .far{
+    margin-right: 50px;
+    
+}
+
+.img-perfil{
+    position:relative;
+}
+.img-1{
+    position: absolute;
+top:0; 
+left:30px;
+width:70px;
+}
+
+
+html{
+
+    body{
+
+        width: 100%;
+        max-width: 1600px;
+        height: 100vh;
+        margin:0 auto;
+        display: grid;
+        grid-template-columns: 1fr 5fr;
+        grid-template-rows:  1fr;
+
+        .header{
+            background:$t2_clr2;
+            height: 150px;
+            width: calc(100%-50%);
+            grid-row:  1 /1;
+            align-items: center;
+            justify-content: center;
+
+            .nav{
+                height: inherit;
+                display:flex;
+                align-items: center;
+                
+                .col1{
+                    display:flex;
+                    flex-direction: column;
+                    width:60%;
+                    height:inherit;
+                    position: relative;
+
+                    .img-perfil{
+                        width: 50px;
+                        height:10px;
+                        position: relative;
+                        
+                    }
+
+                    .saudacao-perfil{
+                        margin: 10px 0 0 130px; 
+                        font-family: $ff-ubuntu;
+
+                        span{
+                            font-size: .8rem;
+                        }
+
+                        .h2{
+                            font-size: 1.4rem;
+                            font-weight: $fw-700;
+                        }
+                    }
+                    .fas, .far{
+                        margin-left: 100px;
+                    }
+                    .input{
+                        width: 60%;
+                        margin:30px 0 20px 10px;
+                        border-radius: $border-radius;
+                        outline: 0;
+                        border: 0;
+                        height:25px;
+                        padding:0 0 0 20px;
+                        font-family: $ff-ubuntu;
+                        font-weight: $fw-500;
+                        color:$t2_clr5;
+                    }
+                }
+
+                .col2{
+                    .row1{
+                        display: flex;
+                        .notification, .img-perfil{
+                            width:30px;
+                            height: 30px;
+                            margin:0 0 0 50px;
+                        }
+
+                        .img-perfil{
+                            img{
+                            width: 40px;
+                            left:-30px;
+                            top:-5px;
+                            }
+                        }
+                        
+                        .notification{
+                            a{
+                                color: $t2_clr4;
+                                transition: .3s;
+                                &:hover{
+                                    color:$t1_clr2
+                                }
+                            }
+                            .far{
+                                font-size:30px;
+                            }
+                        }
+                        
+                        .user{
+                            font-family: $ff-ubuntu;
+                            font-weight: $fw-700;
+                            font-size: 1rem;
+                            margin-left: 10px;
+                        }
+                    }
+
+                    .row2{
+                        display: flex;
+                        button{
+                            border-radius: 15px;
+                            cursor: pointer;
+                            border: 0;
+                            border: 1px solid $t2_clr4;
+                            width:80px;
+                            margin: 30px 30px 0 0;
+                            font-weight: $fw-500;
+                            height: 30px;
+                            transition: .3s;
+                            font-family: $ff-ubuntu;
+                            &:hover{
+                                background: $t2_clr4;
+                                color:$t2_clr3;
+                                filter: brightness(2);
+                            }
+                        }
+                    }
+                }
+            }
+            
+        }
+        .aside-left{
+            background: $t2_clr4;
+            height: 100vh;
+            width: 100%;
+            grid-column: 1;
+            grid-row: 1 / 4;
+
+                .h1{
+                    font-size: 2rem;
+                    text-align: center;
+                    color:$t2_clr1;
+                    padding:20px;
+                    text-transform: uppercase;
+                    font-family: $ff-ubuntu;
+                    font-weight: $fw-700;
+                }
+
+                .list-menu1, .list-menu2{
+                    margin-top: 100px;
+                    a{
+                        color:$t2_clr2;
+                        //text-align: center;
+                        
+                        
+                        .list-item{
+                            width: 100%;
+                            text-transform: uppercase;
+                            font-size: .8rem;
+                            padding: 10px 20px;
+                            transition: .3s;
+                            font-weight: $fw-500;
+                            font-family: $ff-ubuntu;
+
+                            &:hover{
+                                background: $t2_clr1;
+                                color:$t2_clr4;
+                            }
+                            
+                        }
+                    }
+                }
+
+        }
+        
+        .main{
+            display: grid;
+            
+            grid-template-rows: auto;
+            background: $t2_clr3;
+            width: 100%;
+            margin: 0;
+            height: calc(100vh - 150px);
+
+            .section{
+                display: grid;
+                width: 100%;
+                height: 100%;
+                grid-template-columns: 2fr 1fr;
+                gap:5px;
+                
+
+                    .article{
+                        grid-column: 1;
+                        
+                        height:calc(100vh- 150px);
+                        width: inherit;
+                        display:grid;
+                        grid-template-columns: 1fr 1fr;
+                        border-radius: $border-radius;
+	                    //grid-template-rows: repeat(3, 100px);
+                        
+                        
+                        gap:30px;
+                        padding: 30px 20px 30px 30px ;
+
+                            .projects{
+                                
+                                width:100%;
+                                height:150px;
+                                background: white;
+                                border-radius: $border-radius;
+                                box-shadow: $box-shadow;
+                                font-family: $ff-ubuntu;
+                                position: relative;
+                                
+
+                                .bar{
+                                    background: $t2_clr3;
+                                    width: 10px;
+                                    height: 100%;
+                                    position: absolute;
+                                    left: 0;
+                                    border-radius: 30px 0 0 30px;
+                                }
+
+                                .h4{
+                                    font-size:.9rem;
+                                    padding: 5px 0 5px  20px;
+                                    font-weight: $fw-700;
+                                }
+                                .p{
+                                    font-size: .7rem;
+                                    padding:20px;
+                                }
+
+                                .links{
+                                    display: flex;
+                                    width: 100%;
+                                    justify-content: end;
+                                    margin-top: 20px;
+
+                                    a{
+                                        color:$t2_clr4;
+                                        transition: 0.2s;
+                                        &:hover{
+                                            color:$t2_clr3;
+                                        }
+                                        
+                                    }
+                                }
+                            
+
+                            }
+
+                    }
+                    .aside-right{
+                        grid-column: 2;
+                        display:grid;
+                        grid-template-columns: 1fr;
+                        grid-template-rows: 1fr 1fr;
+                        gap:20px;
+                        padding:30px;
+                        .hr{
+                            width:100%;
+                            border-width: 1px;
+                            
+                        }
+
+                        
+                        .announcements, .trending{
+                            display: flex;
+                            flex-direction: column;
+                            padding: 10px;
+                            font-family: $ff-ubuntu;
+
+                            a{
+                                color:$t2_clr4;
+                                transition: .3s;
+                                &:hover{
+                                    color:$t2_clr3;
+                                }
+                            }
+
+                            .h4{
+                                font-size:.9rem;
+                                padding: 5px 0 0 20px;
+                                font-weight: $fw-700;
+                            }
+                            .p{
+                                font-size: .7rem;
+                                padding:5px 20px;
+                            }
+                        }
+                            .announcements{
+                                grid-column: 1;
+                                grid-row: 1;
+                                width: 100%;
+                                background: $t2_clr1;
+                                height: 100%;
+                                border-radius: $border-radius;
+                                box-shadow: $box-shadow;
+                                
+                            }
+
+                            .trending{
+                                grid-column: 1;
+                                width: 100%;
+                                grid-row: 2;
+                                height: 100%;
+                                background: $t2_clr1;
+                                border-radius: $border-radius;
+                                box-shadow: $box-shadow;
+
+                                display:flex;
+                                flex-direction: column;
+                                padding:30px;
+
+                                .container-trending{
+                                    .user-trending{
+                                        display:flex;
+                                        flex-direction: row;
+
+                                        .avatar{
+                                            width:50px;
+                                            height:50px;
+                                            margin-right: 10px;
+                                            position:relative;
+                                            img{
+                                                width:50px;
+                                                position:absolute;
+                                            }
+                                        }
+                                        .user-project{
+                                            justify-content: center;
+                                            display: flex;
+                                            flex-direction:column;
+                                            height: 50px;
+                                            .user{
+                                                font-size: 1rem;
+                                                font-weight: $fw-700;
+                                            }
+                                            .user-trending{
+                                                font-size: .8rem;
+                                                font-weight: $fw-400;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+
+                    }
+
+
+            }   
+        }
+
+        
+    }
+    
+}
