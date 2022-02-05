@@ -1,18 +1,36 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&display=swap');
 
 /*--------TEMA 1 -------*/
-$t1_clr1: #8E94F2;
-$t1_clr2:#8895B3;
-$t1_clr3: #9FA0FF;
-$t1_clr4: #BBADFF;
-$t1_clr5: #DAB6FC;
+:root.theme1{
+    --t2_clr1: #8E94F2;
+    --t1_clr2:#8895B3;
+    --t2_clr3: #9FA0FF;
+    --t2_clr4: #BBADFF;
+    --t2_clr5: #DAB6FC;
+    --t1_clr7:  #899878;
+}
 
 /*--------TEMA 2 -------*/
-$t2_clr1: #F7F7F2;
-$t2_clr2:#E4E6C3;
-$t2_clr3: #899878;
-$t2_clr4: #222725;
-$t2_clr5: #121113;
+:root.theme2{
+    --t2_clr1: #F7F7F2;
+    --t2_clr2:#E4E6C3;
+    --t2_clr3: #899878;
+    --t2_clr4: #222725;
+    --t2_clr5: #121113;
+    --t1_clr2:#8895B3;
+    --t1_clr7: #DAB6FC ;
+}
+
+:root{
+
+    --t2_clr1: #F7F7F2;
+    --t2_clr2:#E4E6C3;
+    --t2_clr3: #899878;
+    --t2_clr4: #222725;
+    --t2_clr5: #121113;
+    --t1_clr2:#8895B3;
+    --t1_clr7:  #DAB6FC ;
+}
 
 $ff-ubuntu: 'Poppins', sans-serif;
 
@@ -41,6 +59,13 @@ left:30px;
 width:70px;
 }
 
+.h1-titulo-label{
+    font-size: 1rem;
+    font-family: $ff-ubuntu;
+    font-weight: $fw-500;
+    position: absolute;
+}
+
 
 html{
 
@@ -55,7 +80,7 @@ html{
         grid-template-rows:  1fr;
 
         .header{
-            background:$t2_clr2;
+            background:var(--t2_clr2);
             height: 150px;
             width: calc(100%-50%);
             grid-row:  1 /1;
@@ -66,6 +91,20 @@ html{
                 height: inherit;
                 display:flex;
                 align-items: center;
+
+                .select-theme{
+                    display: flex;
+                    flex-direction: column;
+
+                    .theme2{
+                        width: 30px;
+                        height: 30px;
+                        background: var(--t1_clr7);
+                        border-radius: 50%;
+                        margin: 0 0 10px 30px;
+
+                    }
+                }
                 
                 .col1{
                     display:flex;
@@ -107,7 +146,7 @@ html{
                         padding:0 0 0 20px;
                         font-family: $ff-ubuntu;
                         font-weight: $fw-500;
-                        color:$t2_clr5;
+                        color:var(--t2_clr5);
                     }
                 }
 
@@ -130,10 +169,10 @@ html{
                         
                         .notification{
                             a{
-                                color: $t2_clr4;
+                                color: var(--t2_clr4);
                                 transition: .3s;
                                 &:hover{
-                                    color:$t1_clr2
+                                    color:var(--t1_clr2);
                                 }
                             }
                             .far{
@@ -155,7 +194,7 @@ html{
                             border-radius: 15px;
                             cursor: pointer;
                             border: 0;
-                            border: 1px solid $t2_clr4;
+                            border: 1px solid var(--t2_clr4);
                             width:80px;
                             margin: 30px 30px 0 0;
                             font-weight: $fw-500;
@@ -163,8 +202,8 @@ html{
                             transition: .3s;
                             font-family: $ff-ubuntu;
                             &:hover{
-                                background: $t2_clr4;
-                                color:$t2_clr3;
+                                background: var(--t2_clr4);
+                                color:var(--t2_clr3);
                                 filter: brightness(2);
                             }
                         }
@@ -174,7 +213,7 @@ html{
             
         }
         .aside-left{
-            background: $t2_clr4;
+            background: var(--t2_clr4);
             height: 100vh;
             width: 100%;
             grid-column: 1;
@@ -183,7 +222,7 @@ html{
                 .h1{
                     font-size: 2rem;
                     text-align: center;
-                    color:$t2_clr1;
+                    color:var(--t2_clr1);
                     padding:20px;
                     text-transform: uppercase;
                     font-family: $ff-ubuntu;
@@ -193,7 +232,7 @@ html{
                 .list-menu1, .list-menu2{
                     margin-top: 100px;
                     a{
-                        color:$t2_clr2;
+                        color:var(--t2_clr2);
                         //text-align: center;
                         
                         
@@ -207,8 +246,8 @@ html{
                             font-family: $ff-ubuntu;
 
                             &:hover{
-                                background: $t2_clr1;
-                                color:$t2_clr4;
+                                background: var(--t2_clr1);
+                                color:var(--t2_clr4);
                             }
                             
                         }
@@ -221,7 +260,7 @@ html{
             display: grid;
             
             grid-template-rows: auto;
-            background: $t2_clr3;
+            background: var(--t2_clr3);
             width: 100%;
             margin: 0;
             height: calc(100vh - 150px);
@@ -232,6 +271,12 @@ html{
                 height: 100%;
                 grid-template-columns: 2fr 1fr;
                 gap:5px;
+                position:relative;
+
+                .h1-titulo-label{
+                    top:5px;
+                    left:30px;
+                }
                 
 
                     .article{
@@ -260,7 +305,7 @@ html{
                                 
 
                                 .bar{
-                                    background: $t2_clr3;
+                                    background: var(--t2_clr3);
                                     width: 10px;
                                     height: 100%;
                                     position: absolute;
@@ -285,10 +330,10 @@ html{
                                     margin-top: 20px;
 
                                     a{
-                                        color:$t2_clr4;
+                                        color:var(--t2_clr4);
                                         transition: 0.2s;
                                         &:hover{
-                                            color:$t2_clr3;
+                                            color:var(--t2_clr3);
                                         }
                                         
                                     }
@@ -303,8 +348,13 @@ html{
                         display:grid;
                         grid-template-columns: 1fr;
                         grid-template-rows: 1fr 1fr;
-                        gap:20px;
-                        padding:30px;
+                        gap:30px;
+                        margin: 20px;
+                        //padding:30px;
+
+                        position: relative;
+
+                            
                         .hr{
                             width:100%;
                             border-width: 1px;
@@ -317,12 +367,14 @@ html{
                             flex-direction: column;
                             padding: 10px;
                             font-family: $ff-ubuntu;
+                            background: white;
+                            
 
                             a{
-                                color:$t2_clr4;
+                                color:var(--t2_clr4);
                                 transition: .3s;
                                 &:hover{
-                                    color:$t2_clr3;
+                                    color:var(--t2_clr3);
                                 }
                             }
 
@@ -340,19 +392,27 @@ html{
                                 grid-column: 1;
                                 grid-row: 1;
                                 width: 100%;
-                                background: $t2_clr1;
+                                
                                 height: 100%;
                                 border-radius: $border-radius;
                                 box-shadow: $box-shadow;
+
+                                .h1-titulo-label{
+                                    top:5px;
+                                }
                                 
                             }
 
                             .trending{
+
+                                .h1-titulo-label{
+                                    top:297px;
+                                }
                                 grid-column: 1;
                                 width: 100%;
                                 grid-row: 2;
                                 height: 100%;
-                                background: $t2_clr1;
+                                
                                 border-radius: $border-radius;
                                 box-shadow: $box-shadow;
 
