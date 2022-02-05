@@ -2,11 +2,11 @@
 
 /*--------TEMA 1 -------*/
 :root.theme1{
-    --t2_clr1: #8E94F2;
-    --t1_clr2:#8895B3;
+    --t2_clr1: #222725;
+    --t2_clr2::#E4E6C3;
     --t2_clr3: #9FA0FF;
     --t2_clr4: #BBADFF;
-    --t2_clr5: #DAB6FC;
+    --t2_clr5: #8895B3;
     --t1_clr7:  #899878;
 }
 
@@ -332,7 +332,6 @@ html{
                                     justify-content: end;
                                     bottom:20px;
                                     position: absolute;
-                                    border:1px solid red;
                                     align-self: center;
 
 
@@ -378,7 +377,7 @@ html{
                             padding: 10px;
                             font-family: $ff-ubuntu;
                             background: white;
-                            height:90%;
+                            
                             
 
                             a{
@@ -404,7 +403,7 @@ html{
                                 grid-row: 1;
                                 width: 100%;
                                 margin-top:20px;
-                                
+                                height:90%;
                                 border-radius: $border-radius;
                                 box-shadow: $box-shadow;
 
@@ -424,13 +423,13 @@ html{
                                 grid-row: 2;
                                 position:relative;
                                 margin-top:10px;
-                                
+                                height:83%;
                                 border-radius: $border-radius;
                                 box-shadow: $box-shadow;
 
                                 display:flex;
                                 flex-direction: column;
-                                padding:30px;
+                                padding:15px;
 
                                 .container-trending{
                                     .user-trending{

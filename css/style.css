@@ -1,11 +1,11 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&display=swap");
 /*--------TEMA 1 -------*/
 :root.theme1 {
-  --t2_clr1: #8E94F2;
-  --t1_clr2:#8895B3;
+  --t2_clr1: #222725;
+  --t2_clr2:#E4E6C3;
   --t2_clr3: #9FA0FF;
   --t2_clr4: #BBADFF;
-  --t2_clr5: #DAB6FC;
+  --t2_clr5: #8895B3;
   --t1_clr7:  #899878;
 }
 
@@ -353,7 +353,6 @@ html body .main .section .article .projects .links {
           justify-content: end;
   bottom: 20px;
   position: absolute;
-  border: 1px solid red;
   -ms-flex-item-align: center;
       align-self: center;
 }
@@ -403,7 +402,6 @@ html body .main .section .aside-right .announcements, html body .main .section .
   padding: 10px;
   font-family: "Poppins", sans-serif;
   background: white;
-  height: 90%;
 }
 
 html body .main .section .aside-right .announcements a, html body .main .section .aside-right .trending a {
@@ -434,6 +432,7 @@ html body .main .section .aside-right .announcements {
   grid-row: 1;
   width: 100%;
   margin-top: 20px;
+  height: 90%;
   border-radius: 10px;
   -webkit-box-shadow: 2px 3px 11px 1px;
           box-shadow: 2px 3px 11px 1px;
@@ -451,6 +450,7 @@ html body .main .section .aside-right .trending {
   grid-row: 2;
   position: relative;
   margin-top: 10px;
+  height: 83%;
   border-radius: 10px;
   -webkit-box-shadow: 2px 3px 11px 1px;
           box-shadow: 2px 3px 11px 1px;
@@ -461,7 +461,7 @@ html body .main .section .aside-right .trending {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  padding: 30px;
+  padding: 15px;
 }
 
 html body .main .section .aside-right .trending .h1-titulo-label {
